@@ -1,4 +1,22 @@
 body {
-    background-image: url("images/fundo.jpg");
+    background-image: url("Images/fundo.jpg");
     background-repeat: no-repeat;
+}
+
+h1{
+    color: #3d5a80;
+    text-align: center;    
+    letter-spacing: 1px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 250%;
+}
+
+p{
+    
+    font-family: "Trebuchet MS", sans-serif;
+    text-align: justify;
+}
+
+ul{
+    font-family: "Trebuchet MS", sans-serif;
 }
