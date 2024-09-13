@@ -1,23 +1,30 @@
 body {
-    background-color: #8E8D8A;
+    
+    background-image: url("images/fundo.jpg");
+    background-repeat: no-repeat;
     
 }
 h1{
-    color: black;
-    text-align: center;
-    
-    letter-spacing: 2px;
-    font-family: Courier;
+    color: #3d5a80;
+    text-align: center;    
+    letter-spacing: 1px;
+    font-family: "Trebuchet MS", sans-serif;
     font-size: 250%;
 }
 
 h2{
-    color: #D8C3A5;
-    font-family: Courier;
+    color: #3d5a80;
+    font-family: "Trebuchet MS", sans-serif;
+    text-align: center; 
+
+
 }
 
 p{
-    color: #EAE7DC;
-    font-family: Courier;
+    
+    font-family: Tahoma, sans-serif;
+
+
+
     text-align: justify;
 }
