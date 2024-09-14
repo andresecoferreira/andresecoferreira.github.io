@@ -12,7 +12,6 @@ h1{
 }
 h2{
     color: #3d5a80;
-    text-align: center;    
     letter-spacing: 1px;
     font-family: "Trebuchet MS", sans-serif;
     
@@ -28,4 +27,5 @@ p{
 ul{
     font-family: "Trebuchet MS", sans-serif;
     font-size: 80%;
+    
 }
