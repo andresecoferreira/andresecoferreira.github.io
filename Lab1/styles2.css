@@ -13,7 +13,7 @@ h1{
 }
 
 h2{
-    color: #3d5a80;
+    color: #3d5a7f;
     font-family: "Trebuchet MS", sans-serif;
     text-align: center; 
 
@@ -25,3 +25,15 @@ p{
     font-family: "Trebuchet MS", sans-serif;
     text-align: justify;
 }
+
+img {
+    border: 5px solid #3d5a7f;
+  }
+
+  a {
+    text-align: center; 
+    font-family: "Trebuchet MS", sans-serif;
+    color: #3d5a7f;
+  }
+  
+ 
