@@ -53,3 +53,12 @@ Se estivermos a testar o nosso website no IDE se voltarmos para Home na realidad
 ```html
 <a href="https://andresecoferreira.github.io/">Home</a>
 ```
+
+## Feedback Lab 2
+
+Bom trabalho! Bom uso do HTML semântico.
+
+É necessário ter cuidado com a formatação do código, podes usar o Visual Studio Code para te ajudar a formatar o código.
+Na próxima aula vou dar alguns exemplos de má formatação!
+
+Keep up the good work!
