@@ -19,18 +19,18 @@
         </header>
         <main>
             <h2>Quizz</h2>
-            <form>
+            <form method="get" action="https://postman-echo.com/get">
                 <fieldset>
                     <legend>Identificação:</legend>
                     <br>
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome">
+                    <input type="text" name="nome" size="30" maxlength="20" autofocus required>
                     <br><br>
                     <label for="apelido">Apelido:</label>
-                    <input type="text" name="apelido">
+                    <input type="text" name="apelido" size="30" maxlength="20" required>
                     <br><br>
                     <label for="email">Email:</label>
-                    <input type="email" name="email">
+                    <input type="email" name="email" autocomplete="off" size="30">
                     <br><br>               
                 </fieldset>
                 <br>
@@ -69,7 +69,7 @@
                     <br><br>
 
                     <label for="freguesias">Quantas freguesias tem o concelho de Torres Vedras?</label>
-                    <input type="number" name="freguesias" id="freguesias">
+                    <input type="number" name="freguesias" id="freguesias" step="5">
                     <br><br>
 
                     <label for="bandeira">Qual a cor da bandeira que está sempre presente na Praia da Física em Santa Cruz?</label>
@@ -84,9 +84,38 @@
                     <input type="time" name="horas_corso_infantil" id="horas_corso_infantil">
                     <br><br>
 
-                    <label for="distancia_lisboa">Distância de Torres Vedras a Lisboa:</label>
+                    <label for="distancia_lisboa">Distância de Torres Vedras a Lisboa (0-200km):</label>
                     <input type="range" name="distancia_lisboa" id="distancia_lisboa" min="0" max="200">
                     <br><br>
+
+                    <label for="distrito">A que distrito pertence a cidade de Torres Vedras:</label>
+                    <select id="distrito" name="distrio">
+                        <option value="leiria">Leiria</option>
+                        <option value="evora">Évora</option>
+                        <option value="santarem">Santarém</option>
+                        <option value="setubal">Setúbal</option>
+                        <option value="lisboa">Lisboa</option>
+                    </select>
+                    <br><br>
+                    
+                    <label for="genero">Género:</label>
+                    <input list="genero" name="genero" form="genero">                    
+                    <datalist id="genero">
+                        <option value="Masculino"></option>
+                        <option value="Feminino"></option>
+                    </datalist>
+                    <br><br>
+
+                    <textarea name="sugestao" rows="5" cols="50" placeholder="Deixe aqui a sua opinião sobre o quizz"></textarea>
+                    <br>
+                    
+
+                    <label for="submit"></label>
+                    <input type="image" src="/Lab3/images/submit.jpg" alt="submit" width="100" height="70">
+                    <br>
+
+                    <label for="reset"></label>
+                    <input type="reset" name="reset" id="reset">
 
                     
                     
