@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Torres Vedras - Viagem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Torres Vedras</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Local</a>
+            <a href="multimedia.html">Multimedia</a>
+            <a href="info.html">Informações</a>
+            <a href="quizz.html">Quizz</a>
+            <a href="viagem.html">Viagem</a>
+        </nav>
+
+    </header>
+    <main>
+        <h2>Viagem</h2>
+        <fieldset>
+            <legend>Dados necessários:</legend>
+            <br>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" autofocus required>
+            <br><br>
+
+            <label for="apelido">Apelido:</label>
+            <input type="text" name="apelido">
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" autocomplete="off" required>
+            <br><br>
+
+            <label for="data_partida">Partida:</label>
+            <input type="date" name="data_partida" id="data_partida" required>
+            <label for="data_partida">Regresso:</label>
+            <input type="date" name="data_regresso" id="data_regresso">
+            <br><br>
+
+            <label for="passageiros">Número de passageiros:</label>
+            <input type="number" name="passageiros" id="passageiros" max="10" min="1">
+            <br><br>
+
+            <label for="transportes">Transporte preferencial</label>
+            <input list="transportes" name="transportes">
+            <datalist id="transportes">
+                <option value="Comboio"></option>
+                <option value="Carro"></option>
+                <option value="Avião"></option>
+            </datalist>
+            <br><br>
+
+            <label for="servico">Serviço:</label>
+            <input type="radio" name="servico" id="basico">Básico
+            <input type="radio" name="servico" id="premium">Premium
+            <br><br>
+
+            <textarea name="pedidos" rows="5" cols="50" placeholder="Introduza aqui pedidos especiais"></textarea>
+            <br><br>
+
+            <label for="gastos">Quando pretende gastar por dia e por pessoa:</label>
+            <input type="number" name="gastos" id="gastos" min="1">
+            <br><br>
+        </fieldset>
+
+
+
+
+    </main>
+    <footer>
+        <br>
+        <a href="../index.html" alt="Home">Voltar ao menu inicial</a>
+        <p>DIW 2024</p>
+    </footer>
+</body>
+
+</html>

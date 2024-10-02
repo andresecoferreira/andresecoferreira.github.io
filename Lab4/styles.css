@@ -1,0 +1,152 @@
+*{
+    font-family: sans-serif;
+    
+}
+h1{
+    background-color: #72BF78;
+    color: white;
+    text-align: center;
+    padding: 20px;    
+    margin:10px;
+    border-radius: 10px;
+}
+
+h2{
+    padding: 5px;
+    color:#72BF78
+
+}
+
+h3{
+    padding: 5px;
+    border-bottom: #72BF78 solid ;
+    color:#72BF78
+
+}
+
+main p{
+    padding: 5px;
+    text-align: justify;
+}
+nav{
+    background-color: #A0D683;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    margin:10px;
+    
+}
+
+nav a{    
+    text-decoration: none;
+    color:white;
+    padding: 10px;
+
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color:white;
+    padding: 10px;
+
+
+}
+
+.menu_multimedia a{
+    text-decoration: none;
+    background-color: #A0D683;
+    padding: 10px;
+    border-radius: 10px;
+    color:white;
+    
+}
+
+.menu_multimedia a:hover{
+    text-decoration:underline;
+    background-color: #72BF78;
+    padding: 10px;
+    border-radius: 10px;
+    color:white;
+
+}
+
+body{  
+    background-color: #F4F4F4;   
+    
+}
+
+body main{
+    background-color: white;    
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+footer{
+    background-color: #72BF78;
+    text-align: center;    
+    padding: 3px;
+    color:white;
+    margin: 10px;
+    border-radius: 10px;
+}
+footer a{
+    text-decoration: none;
+    color:white;
+    
+}
+
+.imagem_video{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: 5px solid #72BF78;   
+    }
+
+
+#video_torres{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: 5px solid #72BF78; 
+
+}
+
+#video_torres:hover{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: 5px solid #72BF78;
+    opacity: 0.7; 
+
+}
+
+pre{
+    text-align: center;}
+
+
+section a{
+    text-decoration: none;
+}
+
+
+#Fotografias p{
+    text-align: center;
+
+}
+
+#Fotografias a{
+    width: 5000px;
+    height: 5000px;
+    
+    background-color: #F4F4F4;
+
+
+}
+
+
+
