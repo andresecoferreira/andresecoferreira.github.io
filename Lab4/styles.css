@@ -12,6 +12,7 @@ h1{
 }
 
 h2{
+    font-size: 30px;
     padding: 5px;
     color:#72BF78
 
@@ -20,7 +21,10 @@ h2{
 h3{
     padding: 5px;
     border-bottom: #72BF78 solid ;
-    color:#72BF78
+    color:#72BF78;
+    font-size:24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
 
 }
 
@@ -134,19 +138,48 @@ section a{
 }
 
 
-#Fotografias p{
-    text-align: center;
-
+.fotos_legenda {
+    text-align: center; 
+     
 }
-
-#Fotografias a{
-    width: 5000px;
-    height: 5000px;
-    
+.fotos_legenda h3{
+    text-align: left;
+}
+.fotos_legenda figure{
+    display: inline-block;
+    padding: 60px;
+    border-bottom: outset 2px;
+    margin: 40px;
+    border-radius: 10px;
     background-color: #F4F4F4;
-
+    text-align: center;
+}
+.fotos_legenda img:hover{
+   opacity: 0.8;  
 
 }
+.fotos_legenda figcaption {
+    font-size: 12px;
+    margin-top: 10px;
+    
+   
+}
+
+label {
+    font-size: small;
+}
+
+input {
+    font-size: medium;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+
 
 
 
