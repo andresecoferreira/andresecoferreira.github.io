@@ -23,55 +23,54 @@
     <main>
         <h2>Viagem</h2>
         <fieldset>
-            <legend>Dados necessários:</legend>
+            <legend>DADOS NECESSÁRIOS:</legend>
             
-            <label for="nome">Nome:</label>
+            <label for="nome" class="colocar_bold">Nome:</label>
             <input type="text" name="nome" autofocus required>
             
             
 
-            <label for="apelido">Apelido:</label>
+            <label for="apelido" class="colocar_bold">Apelido:</label>
             <input type="text" name="apelido">
             
             
 
-            <label for="email">Email:</label>
+            <label for="email" class="colocar_bold">Email:</label>
             <input type="email" name="email" autocomplete="off" required>
             
             
 
-            <label for="data_partida">Partida:</label>
+            <label for="data_partida" class="colocar_bold">Partida:</label>
             <input type="date" name="data_partida" id="data_partida" required>
-            <label for="data_partida">Regresso:</label>
+            <label for="data_partida" class="colocar_bold">Regresso:</label>
             <input type="date" name="data_regresso" id="data_regresso">
             
             
 
-            <label for="passageiros">Número de passageiros:</label>
+            <label for="passageiros" class="colocar_bold">Número de passageiros:</label>
             <input type="number" name="passageiros" id="passageiros" max="10" min="1">
             
             
 
-            <label for="transportes">Transporte preferencial</label>
+            <label for="transportes" class="colocar_bold">Transporte preferencial:</label>
             <input list="transportes" name="transportes">
             <datalist id="transportes">
                 <option value="Comboio"></option>
                 <option value="Carro"></option>
                 <option value="Avião"></option>
             </datalist>
-            <br>
-           
-
-            <label for="servico">Serviço:</label>
-            <input type="radio" name="servico" id="basico">Básico
-            <input type="radio" name="servico" id="premium">Premium
             
-            
-
+                <label for="servico" class="colocar_bold">Serviço:</label>
+                    <div class="escolha_multipla">
+                        <input type="radio" name="servico" id="basico">Básico     
+                        <input type="radio" name="servico" id="premium">Premium
+                    </div>
+                </label>
+          
             <textarea name="pedidos" rows="5" cols="50" placeholder="Introduza aqui pedidos especiais"></textarea>
             
             
-            <label for="gastos">Quando pretende gastar por dia e por pessoa:</label>
+            <label for="gastos" class="colocar_bold">Quando pretende gastar por dia e por pessoa:</label>
             <input type="number" name="gastos" id="gastos" min="1">
             
         </fieldset>

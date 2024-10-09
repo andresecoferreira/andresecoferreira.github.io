@@ -20,7 +20,7 @@ h2{
 
 h3{
     padding: 5px;
-    border-bottom: #72BF78 solid ;
+    border-bottom:3px #72BF78 solid ;
     color:#72BF78;
     font-size:24px;
     margin-bottom: 20px;
@@ -50,9 +50,6 @@ nav a{
 
 nav a:hover{
     text-decoration: underline;
-    color:white;
-    padding: 10px;
-
 
 }
 
@@ -107,7 +104,7 @@ footer a{
     margin-right: auto;
     border-radius: 10px;
     border: 5px solid #72BF78;   
-    }
+}
 
 
 #video_torres{
@@ -120,11 +117,6 @@ footer a{
 }
 
 #video_torres:hover{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    border: 5px solid #72BF78;
     opacity: 0.7; 
 
 }
@@ -176,10 +168,51 @@ input {
 label, input {
     display: block;
     margin-bottom: 10px;
+    margin-top: 5px;
 }
 
+.escolha_multipla{
+    display: flex; 
+    margin-bottom: 20px;  
+    font-size: small; 
+}
 
+fieldset p{
+    font-size: small;
+    font-weight: bold;
 
+}
+
+#distrito{
+    margin-bottom: 10px;
+}
+
+.colocar_bold{
+    font-weight: bold;
+}
+
+fieldset legend{
+    color:white;
+    background-color: #72BF78;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 3px 3px lightgray;
+    
+}
+fieldset{
+    margin-bottom: 10px;
+}
+
+#reset{
+    background-color: #72BF78;
+    color: white;
+    text-align: center;
+    padding: 10px;    
+    border-radius: 10px;
+    border:1px #72BF78;
+    box-shadow: 5px 3px 3px lightgray;
+
+}
 
 
 

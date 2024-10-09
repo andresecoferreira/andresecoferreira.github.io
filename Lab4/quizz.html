@@ -22,17 +22,17 @@
             <h2>Quizz</h2>
             <form method="get" action="https://postman-echo.com/get">
                 <fieldset>
-                    <legend>Identificação:</legend>
+                    <legend>IDENTIFICAÇÃO:</legend>
                     
-                    <label for="nome">Nome:</label>
+                    <label for="nome" class="colocar_bold">Nome:</label>
                     <input type="text" name="nome" size="30" maxlength="20" autofocus required>
                     
                     
-                    <label for="apelido">Apelido:</label>
+                    <label for="apelido" class="colocar_bold">Apelido:</label>
                     <input type="text" name="apelido" size="30" maxlength="20" required>
                     
                     
-                    <label for="email">Email:</label>
+                    <label for="email" class="colocar_bold">Email:</label>
                     <input type="email" name="email" autocomplete="off" size="30">
                     
                                    
@@ -40,64 +40,67 @@
                 
 
                 <fieldset>
-                    <legend>Perguntas sobre a cidade:</legend>            
+                    <legend>PERGUNTAS SOBRE A CIDADE:</legend>            
                     <p>As Linhas de Torres Vedras foram construídas durante que evento histórico?</p>
                     
-                    <input type="radio" name="guerra_civil_portuguesa" id="guerra_civil_portuguesa">
-                    <label for="guerra_civil_portuguesa">Guerra Civil Portuguesa</label>
+                    <div class="escolha_multipla">
+                        <input type="radio" name="guerra_civil_portuguesa" id="guerra_civil_portuguesa">
+                        <label for="guerra_civil_portuguesa">Guerra Civil Portuguesa</label>                        
+                        
+                        <input type="radio" name="invasoes_francesas" id="invasoes_francesas">
+                        <label for="invasoes_francesas">Invasões Francesas</label>
+                        
+                        <input type="radio" name="primeira_guerra_mundial" id="primeira_guerra_mundial">
+                        <label for="primeira_guerra_mundial">Primeira Guerra Mundial</label>
+                    </div>
                     
-                    <input type="radio" name="invasoes_francesas" id="invasoes_francesas">
-                    <label for="invasoes_francesas">Invasões Francesas</label>
-                    
-                    <input type="radio" name="primeira_guerra_mundial" id="primeira_guerra_mundial">
-                    <label for="primeira_guerra_mundial">Primeira Guerra Mundial</label>
-                    
-                    
-                    <label for="categoria_cidade">Em que dia Torres Vedras foi elevado à categoria de cidade:</label>
+                    <label for="categoria_cidade" class="colocar_bold">Em que dia Torres Vedras foi elevado à categoria de cidade:</label>
                     <input type="date" name="categoria_cidade" id="categoria_cidade">
                                       
                     
-                    <p>Qual é o doce típico da cidade de Torres Vedras</p>
-                    <input type="checkbox" name="ovos_moles" id="ovos_moles">
-                    <label for="ovos_moles">Ovos moles</label>
-                        
-                    <input type="checkbox" name="broas_castelares" id="broas_castelares">
-                    <label for="broas_castelares">Broas castelares</label>
-                        
-                    <input type="checkbox" name="pasteis_feijao" id="pasteis_feijao">
-                    <label for="pasteis_feijao">Pastéis de feijão</label>
-                        
-                    <input type="checkbox" name="pasteis_tentugal" id="pasteis_tentugal">
-                    <label for="pasteis_tentugal">Pastéis de tentúgal</label>
+                    <p>Qual é o doce típico da cidade de Torres Vedras?</p>
+                    <div class="escolha_multipla">
+                        <input type="checkbox" name="ovos_moles" id="ovos_moles">
+                        <label for="ovos_moles">Ovos moles</label>
+                            
+                        <input type="checkbox" name="broas_castelares" id="broas_castelares">
+                        <label for="broas_castelares">Broas castelares</label>
+                            
+                        <input type="checkbox" name="pasteis_feijao" id="pasteis_feijao">
+                        <label for="pasteis_feijao">Pastéis de feijão</label>
+                            
+                        <input type="checkbox" name="pasteis_tentugal" id="pasteis_tentugal">
+                        <label for="pasteis_tentugal">Pastéis de tentúgal</label>
+                    </div>
                 
                     
 
-                    <label for="freguesias">Quantas freguesias tem o concelho de Torres Vedras?</label>
+                    <label for="freguesias" class="colocar_bold">Quantas freguesias tem o concelho de Torres Vedras?</label>
                     <input type="number" name="freguesias" id="freguesias" step="5">
                     
                     
 
-                    <label for="bandeira">Qual a cor da bandeira que está sempre presente na Praia da Física em Santa Cruz?</label>
+                    <label for="bandeira" class="colocar_bold">Qual a cor da bandeira que está sempre presente na Praia da Física em Santa Cruz?</label>
                     <input type="color" name="bandeira" id="bandeira">
                     
                     
 
-                    <label for="rua_camara_municipal">Qual o nome da rua onde está situada a Câmara Municipal de Torres Vedras?</label>
+                    <label for="rua_camara_municipal" class="colocar_bold">Qual o nome da rua onde está situada a Câmara Municipal de Torres Vedras?</label>
                     <input type="text" name="rua_camara_municipal" id="rua_camara_municipal">
                     
                     
 
-                    <label for="horas_corso_infantil">A que horas começa o corso infantil no Carnaval?</label>
+                    <label for="horas_corso_infantil" class="colocar_bold">A que horas começa o corso infantil no Carnaval?</label>
                     <input type="time" name="horas_corso_infantil" id="horas_corso_infantil">
                     
             
 
-                    <label for="distancia_lisboa">Distância de Torres Vedras a Lisboa (0-200km):</label>
+                    <label for="distancia_lisboa" class="colocar_bold">Distância de Torres Vedras a Lisboa (0-200km):</label>
                     <input type="range" name="distancia_lisboa" id="distancia_lisboa" min="0" max="200">
                     
                     
 
-                    <label for="distrito">A que distrito pertence a cidade de Torres Vedras:</label>
+                    <label for="distrito" class="colocar_bold">A que distrito pertence a cidade de Torres Vedras:</label>
                     <select id="distrito" name="distrio">
                         <option value="leiria">Leiria</option>
                         <option value="evora">Évora</option>
@@ -107,7 +110,7 @@
                     </select>
                     
                     
-                    <label for="genero">Género:</label>
+                    <label for="genero" class="colocar_bold">Género:</label>
                     <input list="genero" name="genero" form="genero">                    
                     <datalist id="genero">
                         <option value="Masculino"></option>
