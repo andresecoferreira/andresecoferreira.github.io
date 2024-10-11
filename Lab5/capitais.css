@@ -1,0 +1,39 @@
+* {
+    margin:0;  
+    padding:0;  
+    box-sizing: border-box; /* medidas sao tomadas da borda */
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+header{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(155, 155, 170);
+    align-items: center;
+    padding: 10px;
+}
+
+
+nav a:link{
+    text-decoration: none;
+    padding: 20px;    
+}
+
+nav a:visited{
+    color: black;
+}
+
+nav a:hover{
+
+}
+
+nav a:active{
+
+}
+
+header a:last-child{
+    background-color:palegoldenrod ;
+    border-radius: 20px;
+    padding: 13px;
+}

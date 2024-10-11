@@ -9,6 +9,9 @@ h1{
     padding: 20px;    
     margin:10px;
     border-radius: 10px;
+    text-transform: uppercase;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 300%;
 }
 
 h2{
@@ -251,6 +254,16 @@ fieldset{
 
 #top_restaurantes li,#top_monumentos li,#locais li{
     margin-bottom: 10px;
+    font-size: 2em;
+    
+}
+
+#locais ul li{
+    list-style-type: square;
+}
+
+#top_restaurantes ol li,#top_monumentos ol li{
+    list-style:upper-roman;
 }
 
 #foto{
@@ -260,10 +273,29 @@ fieldset{
     justify-content: center;
 }
 
-#top_restaurantes li:nth-child(2n + 1){
-    color:#72BF78;
+
+#top_restaurantes li:nth-child(2n + 1),#top_monumentos li:nth-child(2n),#locais li:nth-child(2n+1){
+    color:#72BF78;    
+}
+
+#altura_visitar tr:nth-child(2n){
+    background-color:#72BF78; 
+    color:white;
+}
+
+#altura_visitar tr:nth-child(2n) td:nth-child(2){
+    background-color:#A0D683; 
+    color:white;
+}
+#altura_visitar table{
+    border: 2px #72BF78;
+    text-align: center;
+    box-shadow: 3px 3px 3px lightgray;    
+    
     
 }
+
+
 
 
 
