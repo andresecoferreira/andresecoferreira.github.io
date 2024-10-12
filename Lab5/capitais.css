@@ -71,7 +71,12 @@ header a:last-child{
     font-style: italic;
     margin-top: 10px;
     
+    
     text-align: center;
+}
+#paisagem{
+    background-color: #98B28F;
+    
 }
 #paisagem div{
     position: relative;
@@ -90,4 +95,43 @@ header a:last-child{
     right: 30px;;
     color: white;
     font-size: 150%;
+}
+
+article#cidades{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5vw;
+    
+   
+    background-color: #98B28F;
+    
+}
+#cidades section{
+    display: flex;
+    margin: 10px;
+    
+    
+}
+#cidades img{
+    width:100px;
+    border-radius: 15px 0px 0px 15px;
+}
+#cidades div{
+    width: 100px;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+
+    border-radius: 0px 15px 15px 0px;
+    
+}
+
+#cidades div:hover{
+    background-color: lightgray;
 }
