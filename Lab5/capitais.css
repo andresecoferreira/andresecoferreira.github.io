@@ -49,6 +49,7 @@ nav a:active{
 
 }
 
+
 header a:last-child{
     background-color:#C6E3C5 ;
     border-radius: 20px;
@@ -134,4 +135,52 @@ article#cidades{
 
 #cidades div:hover{
     background-color: lightgray;
+}
+
+#experimenta{
+    background-color: #98B28F;
+    display: flex;
+    justify-content: center;
+}
+#experimenta p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    
+}
+
+#experimenta div{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: black;
+    margin: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#experimenta div:nth-child(2){
+    background-color: #6B8375;
+}
+
+#experimenta div:nth-child(3){
+    background-color: #C6E3C5;
+    color: black;
+}
+#experimenta div:nth-child(4){
+    background-color: #B2C8A2;
+    color: black;
+}
+#experimenta div:nth-child(5){
+    background-color: #88A384;
+    
+}
+#smile{
+    visibility: hidden;
+}
+#smile:hover{
+    color:#6B8375;
+    display:flex;    
 }

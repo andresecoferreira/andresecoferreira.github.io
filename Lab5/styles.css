@@ -48,6 +48,7 @@ nav a{
     text-decoration: none;
     color:white;
     padding: 10px;
+    
 
 }
 
@@ -148,9 +149,11 @@ section a{
     border-radius: 10px;
     background-color: #F4F4F4;
     text-align: center;
+    
 }
 .fotos_legenda img:hover{
-   opacity: 0.8;  
+   opacity: 0.8; 
+   cursor:zoom-in; 
 
 }
 .fotos_legenda figcaption {
@@ -291,10 +294,19 @@ fieldset{
     border: 2px #72BF78;
     text-align: center;
     box-shadow: 3px 3px 3px lightgray;    
-    
-    
+     
+}
+#wikipedia{
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    font-size: small;
 }
 
+nav i{
+    color:white;
+    
+}
 
 
 
