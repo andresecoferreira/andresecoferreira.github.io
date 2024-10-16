@@ -1,0 +1,349 @@
+*{
+    font-family: sans-serif;  
+    margin:0;  
+    padding:0;  
+    box-sizing: border-box;    
+    
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+        'header_area header_area header_area'
+        'nav_area nav_area nav_area'
+        'main_area main_area aside_area'
+        'footer_area footer_area footer_area';
+}
+
+header{grid-area:header_area;}
+nav{grid-area:nav_area;}
+main{grid-area:main_area;}
+footer{grid-area:footer_area;}
+aside{grid-area:aside_area;}
+
+aside{
+    border-radius: 10px;
+    margin: 10px;
+
+}
+
+
+h1{
+    background-color: #72BF78;
+    color: white;
+    text-align: center;
+    padding: 20px;    
+    margin:10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 300%;
+}
+
+h2{
+    font-size: 30px;
+    padding: 5px;
+    color:#72BF78;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+h3{
+    padding: 5px;
+    border-bottom:3px #72BF78 solid ;
+    color:#72BF78;
+    font-size:24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+
+}
+
+main p{
+    padding: 5px;
+    text-align: justify;
+}
+nav{
+    background-color: #A0D683;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin:10px;
+    
+}
+
+nav a{    
+    text-decoration: none;
+    color:white; 
+    margin-right: 30px;
+    margin-left: 3px;
+    
+      
+
+}
+
+nav a:hover{
+    text-decoration: underline;
+
+}
+
+.menu_multimedia a{
+    text-decoration: none;
+    background-color: #A0D683;
+    padding: 10px;
+    border-radius: 10px;
+    color:white;
+    
+}
+
+.menu_multimedia a:hover{
+    text-decoration:underline;
+    background-color: #72BF78;
+    padding: 10px;
+    border-radius: 10px;
+    color:white;
+
+}
+
+body{  
+    background-color: #F4F4F4;   
+    
+}
+
+body main{
+    background-color: white;    
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+footer{
+    background-color: #72BF78;
+    text-align: center;    
+    padding: 3px;
+    color:white;
+    margin: 10px;
+    border-radius: 10px;
+}
+footer a{
+    text-decoration: none;
+    color:white;
+    
+}
+
+.imagem_video{
+    display: block;
+    border-radius: 10px;
+    border: 5px solid #72BF78;   
+}
+
+
+#video_torres{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: 5px solid #72BF78; 
+
+}
+
+#video_torres:hover{
+    opacity: 0.7; 
+
+}
+
+pre{
+    text-align: center;}
+
+
+section a{
+    text-decoration: none;
+}
+
+
+.fotos_legenda {
+    text-align: center; 
+     
+}
+.fotos_legenda h3{
+    text-align: left;
+}
+.fotos_legenda figure{
+    display: inline-block;
+    padding: 60px;
+    border-bottom: outset 2px;
+    margin: 40px;
+    border-radius: 10px;
+    background-color: #F4F4F4;
+    text-align: center;
+    
+}
+.fotos_legenda img:hover{
+   opacity: 0.8; 
+   cursor:zoom-in; 
+
+}
+.fotos_legenda figcaption {
+    font-size: 12px;
+    margin-top: 10px;
+    
+   
+}
+
+label {
+    font-size: small;
+}
+
+input {
+    font-size: medium;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.escolha_multipla{
+    display: flex; 
+    margin-bottom: 20px;  
+    font-size: small; 
+}
+
+fieldset p{
+    font-size: small;
+    font-weight: bold;
+
+}
+
+#distrito{
+    margin-bottom: 10px;
+}
+
+.colocar_bold{
+    font-weight: bold;
+}
+
+fieldset legend{
+    color:white;
+    background-color: #72BF78;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 3px 3px lightgray;
+    
+}
+fieldset{
+    margin-bottom: 10px;
+}
+
+#reset{
+    background-color: #72BF78;
+    color: white;
+    text-align: center;
+    padding: 10px;    
+    border-radius: 10px;
+    border:1px #72BF78;
+    box-shadow: 5px 3px 3px lightgray;
+
+}
+#pontos_interesse{
+    margin:10px;
+    
+}
+
+#pontos_interesse nav{
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: #A0D683;
+    box-shadow: 3px 3px 3px lightgrey;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    
+}
+
+#pontos_interesse a{
+    color:white;
+    text-decoration:none;
+    margin-right:50px;
+}
+#top_restaurantes,#top_monumentos,#locais,#foto,#altura_visitar{
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #72BF78; 
+    margin: 10px;
+    background-color: white;
+    box-shadow: 3px 3px 3px lightgrey;
+}
+
+#top_restaurantes h3, #top_monumentos h3,#locais h3,#foto h3,#altura_visitar h3{
+    border-bottom: none;
+
+}
+
+#top_restaurantes li,#top_monumentos li,#locais li{
+    margin-bottom: 10px;
+    font-size: 2em;
+    
+}
+
+#locais ul li{
+    list-style-type: square;
+}
+
+#top_restaurantes ol li,#top_monumentos ol li{
+    list-style:upper-roman;
+}
+
+#foto{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#top_restaurantes li:nth-child(2n + 1),#top_monumentos li:nth-child(2n),#locais li:nth-child(2n+1){
+    color:#72BF78;    
+}
+
+#altura_visitar tr:nth-child(2n){
+    background-color:#72BF78; 
+    color:white;
+}
+
+#altura_visitar tr:nth-child(2n) td:nth-child(2){
+    background-color:#A0D683; 
+    color:white;
+}
+#altura_visitar table{
+    border: 2px #72BF78;
+    text-align: center;
+    box-shadow: 3px 3px 3px lightgray;    
+     
+}
+#wikipedia{
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    font-size: small;
+}
+
+nav i{
+    color:white;
+    
+}
+
+#pub{
+    display: flex;
+    align-items: center;
+    
+}
+
+
+
+
+
