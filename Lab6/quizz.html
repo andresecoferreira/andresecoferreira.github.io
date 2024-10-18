@@ -1,153 +1,162 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Torres Vedras - Quizz</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header>
-            <h1>Torres Vedras</h1>
-            
-            
-        </header>
 
-        <nav>
-            <i class="fa fa-home"></i><a href="index.html">Home</a>
-            <i class="fa fa-map-marker"></i><a href="local.html">Local</a>
-            <i class="fa fa-video-camera"></i><a href="multimedia.html">Multimedia</a>
-            <i class="fa fa-info"></i><a href="info.html">Informações</a>
-            <i class="fa fa-question"></i><a href="quizz.html">Quizz</a>
-            <i class="fa fa-car"></i><a href="viagem.html">Viagem</a>
-            <i class="fa fa-check"></i><a href="pontosdeinteresse.html">Pontos de Interesse</a>
-            <i class="fa fa-map"></i><a href="capitais.html">Capitais</a>
-        </nav>
-        <main>
-            <h2>Quizz</h2>
-            <form method="get" action="https://postman-echo.com/get">
-                <fieldset>
-                    <legend>IDENTIFICAÇÃO:</legend>
-                    
-                    <label for="nome" class="colocar_bold">Nome:</label>
-                    <input type="text" name="nome" size="30" maxlength="20" autofocus required>
-                    
-                    
-                    <label for="apelido" class="colocar_bold">Apelido:</label>
-                    <input type="text" name="apelido" size="30" maxlength="20" required>
-                    
-                    
-                    <label for="email" class="colocar_bold">Email:</label>
-                    <input type="email" name="email" autocomplete="off" size="30">
-                    
-                                   
-                </fieldset>
-                
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Torres Vedras - Quizz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-                <fieldset>
-                    <legend>PERGUNTAS SOBRE A CIDADE:</legend>            
-                    <p>As Linhas de Torres Vedras foram construídas durante que evento histórico?</p>
-                    
-                    <div class="escolha_multipla">
-                        <input type="radio" name="guerra_civil_portuguesa" id="guerra_civil_portuguesa">
-                        <label for="guerra_civil_portuguesa">Guerra Civil Portuguesa</label>                        
-                        
-                        <input type="radio" name="invasoes_francesas" id="invasoes_francesas">
-                        <label for="invasoes_francesas">Invasões Francesas</label>
-                        
-                        <input type="radio" name="primeira_guerra_mundial" id="primeira_guerra_mundial">
-                        <label for="primeira_guerra_mundial">Primeira Guerra Mundial</label>
-                    </div>
-                    
-                    <label for="categoria_cidade" class="colocar_bold">Em que dia Torres Vedras foi elevado à categoria de cidade:</label>
-                    <input type="date" name="categoria_cidade" id="categoria_cidade">
-                                      
-                    
-                    <p>Qual é o doce típico da cidade de Torres Vedras?</p>
-                    <div class="escolha_multipla">
-                        <input type="checkbox" name="ovos_moles" id="ovos_moles">
-                        <label for="ovos_moles">Ovos moles</label>
-                            
-                        <input type="checkbox" name="broas_castelares" id="broas_castelares">
-                        <label for="broas_castelares">Broas castelares</label>
-                            
-                        <input type="checkbox" name="pasteis_feijao" id="pasteis_feijao">
-                        <label for="pasteis_feijao">Pastéis de feijão</label>
-                            
-                        <input type="checkbox" name="pasteis_tentugal" id="pasteis_tentugal">
-                        <label for="pasteis_tentugal">Pastéis de tentúgal</label>
-                    </div>
-                
-                    
-
-                    <label for="freguesias" class="colocar_bold">Quantas freguesias tem o concelho de Torres Vedras?</label>
-                    <input type="number" name="freguesias" id="freguesias" step="5">
-                    
-                    
-
-                    <label for="bandeira" class="colocar_bold">Qual a cor da bandeira que está sempre presente na Praia da Física em Santa Cruz?</label>
-                    <input type="color" name="bandeira" id="bandeira">
-                    
-                    
-
-                    <label for="rua_camara_municipal" class="colocar_bold">Qual o nome da rua onde está situada a Câmara Municipal de Torres Vedras?</label>
-                    <input type="text" name="rua_camara_municipal" id="rua_camara_municipal">
-                    
-                    
-
-                    <label for="horas_corso_infantil" class="colocar_bold">A que horas começa o corso infantil no Carnaval?</label>
-                    <input type="time" name="horas_corso_infantil" id="horas_corso_infantil">
-                    
-            
-
-                    <label for="distancia_lisboa" class="colocar_bold">Distância de Torres Vedras a Lisboa (0-200km):</label>
-                    <input type="range" name="distancia_lisboa" id="distancia_lisboa" min="0" max="200">
-                    
-                    
-
-                    <label for="distrito" class="colocar_bold">A que distrito pertence a cidade de Torres Vedras:</label>
-                    <select id="distrito" name="distrio">
-                        <option value="leiria">Leiria</option>
-                        <option value="evora">Évora</option>
-                        <option value="santarem">Santarém</option>
-                        <option value="setubal">Setúbal</option>
-                        <option value="lisboa">Lisboa</option>
-                    </select>
-                    
-                    
-                    <label for="genero" class="colocar_bold">Género:</label>
-                    <input list="genero" name="genero" form="genero">                    
-                    <datalist id="genero">
-                        <option value="Masculino"></option>
-                        <option value="Feminino"></option>
-                    </datalist>  
-                                      
-
-                    <textarea name="sugestao" rows="5" cols="50" placeholder="Deixe aqui a sua opinião sobre o quizz"></textarea>
-                                       
-                    
-                    <label for="submit"></label>
-                    <input type="image" src="/Lab3/images/submit.jpg" alt="submit" width="100" height="70">
-                    
-                    <label for="reset"></label>
-                    <input type="reset" name="reset" id="reset">
-
-   
-                </fieldset>
-            </form>
-            
+<body>
+    <header>
+        <h1>Torres Vedras</h1>
 
 
-        </main>
-        <aside class="pub">
-            <a href="https://www.cm-tvedras.pt/">Site CM Torres Vedras</a>
-            <img src="images/banner2.jpg">
-        </aside>
-        <footer>
-            
-            <a href="../index.html" alt="Home">Voltar ao menu inicial</a>
-            <p>DIW 2024</p>
-        </footer>
-    </body>
+    </header>
+
+    <nav>
+        <i class="fa fa-home"></i><a href="index.html">Home</a>
+        <i class="fa fa-map-marker"></i><a href="local.html">Local</a>
+        <i class="fa fa-video-camera"></i><a href="multimedia.html">Multimedia</a>
+        <i class="fa fa-info"></i><a href="info.html">Informações</a>
+        <i class="fa fa-question"></i><a href="quizz.html">Quizz</a>
+        <i class="fa fa-car"></i><a href="viagem.html">Viagem</a>
+        <i class="fa fa-check"></i><a href="pontosdeinteresse.html">Pontos de Interesse</a>
+        <i class="fa fa-map"></i><a href="capitais.html">Capitais</a>
+    </nav>
+    <main>
+        <h2>Quizz</h2>
+        <form method="get" action="https://postman-echo.com/get">
+            <fieldset>
+                <legend>IDENTIFICAÇÃO:</legend>
+
+                <label for="nome" class="colocar_bold">Nome:</label>
+                <input type="text" name="nome" size="30" maxlength="20" autofocus required>
+
+
+                <label for="apelido" class="colocar_bold">Apelido:</label>
+                <input type="text" name="apelido" size="30" maxlength="20" required>
+
+
+                <label for="email" class="colocar_bold">Email:</label>
+                <input type="email" name="email" autocomplete="off" size="30">
+
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>PERGUNTAS SOBRE A CIDADE:</legend>
+                <p>As Linhas de Torres Vedras foram construídas durante que evento histórico?</p>
+
+                <div class="escolha_multipla">
+                    <input type="radio" name="guerra_civil_portuguesa" id="guerra_civil_portuguesa">
+                    <label for="guerra_civil_portuguesa">Guerra Civil Portuguesa</label>
+
+                    <input type="radio" name="invasoes_francesas" id="invasoes_francesas">
+                    <label for="invasoes_francesas">Invasões Francesas</label>
+
+                    <input type="radio" name="primeira_guerra_mundial" id="primeira_guerra_mundial">
+                    <label for="primeira_guerra_mundial">Primeira Guerra Mundial</label>
+                </div>
+
+                <label for="categoria_cidade" class="colocar_bold">Em que dia Torres Vedras foi elevado à categoria de
+                    cidade:</label>
+                <input type="date" name="categoria_cidade" id="categoria_cidade">
+
+
+                <p>Qual é o doce típico da cidade de Torres Vedras?</p>
+                <div class="escolha_multipla">
+                    <input type="checkbox" name="ovos_moles" id="ovos_moles">
+                    <label for="ovos_moles">Ovos moles</label>
+
+                    <input type="checkbox" name="broas_castelares" id="broas_castelares">
+                    <label for="broas_castelares">Broas castelares</label>
+
+                    <input type="checkbox" name="pasteis_feijao" id="pasteis_feijao">
+                    <label for="pasteis_feijao">Pastéis de feijão</label>
+
+                    <input type="checkbox" name="pasteis_tentugal" id="pasteis_tentugal">
+                    <label for="pasteis_tentugal">Pastéis de tentúgal</label>
+                </div>
+
+
+
+                <label for="freguesias" class="colocar_bold">Quantas freguesias tem o concelho de Torres Vedras?</label>
+                <input type="number" name="freguesias" id="freguesias" step="5">
+
+
+
+                <label for="bandeira" class="colocar_bold">Qual a cor da bandeira que está sempre presente na Praia da
+                    Física em Santa Cruz?</label>
+                <input type="color" name="bandeira" id="bandeira">
+
+
+
+                <label for="rua_camara_municipal" class="colocar_bold">Qual o nome da rua onde está situada a Câmara
+                    Municipal de Torres Vedras?</label>
+                <input type="text" name="rua_camara_municipal" id="rua_camara_municipal">
+
+
+
+                <label for="horas_corso_infantil" class="colocar_bold">A que horas começa o corso infantil no
+                    Carnaval?</label>
+                <input type="time" name="horas_corso_infantil" id="horas_corso_infantil">
+
+
+
+                <label for="distancia_lisboa" class="colocar_bold">Distância de Torres Vedras a Lisboa
+                    (0-200km):</label>
+                <input type="range" name="distancia_lisboa" id="distancia_lisboa" min="0" max="200">
+
+
+
+                <label for="distrito" class="colocar_bold">A que distrito pertence a cidade de Torres Vedras:</label>
+                <select id="distrito" name="distrio">
+                    <option value="leiria">Leiria</option>
+                    <option value="evora">Évora</option>
+                    <option value="santarem">Santarém</option>
+                    <option value="setubal">Setúbal</option>
+                    <option value="lisboa">Lisboa</option>
+                </select>
+
+
+                <label for="genero" class="colocar_bold">Género:</label>
+                <input list="genero" name="genero" form="genero">
+                <datalist id="genero">
+                    <option value="Masculino"></option>
+                    <option value="Feminino"></option>
+                </datalist>
+
+
+                <textarea name="sugestao" rows="5" cols="50"
+                    placeholder="Deixe aqui a sua opinião sobre o quizz"></textarea>
+
+
+                <label for="submit"></label>
+                <input type="image" src="/Lab3/images/submit.jpg" alt="submit" width="100" height="70">
+
+                <label for="reset"></label>
+                <input type="reset" name="reset" id="reset">
+
+
+            </fieldset>
+        </form>
+
+
+
+    </main>
+    <aside class="pub">
+        <a href="https://www.cm-tvedras.pt/">Site CM Torres Vedras</a>
+        <img src="images/banner2.jpg">
+    </aside>
+    <footer>
+
+        <a href="../index.html" alt="Home">Voltar ao menu inicial</a>
+        <p>DIW 2024</p>
+    </footer>
+</body>
+
 </html>
