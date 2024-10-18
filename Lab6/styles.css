@@ -194,10 +194,15 @@ section a{
 
 label {
     font-size: small;
+    margin-left: 5px;
 }
+textarea,datalist{
+    margin-left: 5px;
 
+}
 input {
     font-size: medium;
+    margin-left: 5px;
 }
 
 label, input {
@@ -220,6 +225,7 @@ fieldset p{
 
 #distrito{
     margin-bottom: 10px;
+    margin-left: 5px;
 }
 
 .colocar_bold{
@@ -232,6 +238,7 @@ fieldset legend{
     border-radius: 10px;
     padding: 10px;
     box-shadow: 5px 3px 3px lightgray;
+    margin-bottom: 10px;
     
 }
 fieldset{
@@ -262,6 +269,7 @@ fieldset{
     display:flex;
     align-items:center;
     justify-content: center;
+    margin-bottom: 10px;
     
 }
 
@@ -269,6 +277,7 @@ fieldset{
     color:white;
     text-decoration:none;
     margin-right:50px;
+    
 }
 #top_restaurantes,#top_monumentos,#locais,#foto,#altura_visitar{
     padding: 20px;
@@ -286,16 +295,18 @@ fieldset{
 
 #top_restaurantes li,#top_monumentos li,#locais li{
     margin-bottom: 10px;
-    font-size: 2em;
+    
     
 }
 
 #locais ul li{
     list-style-type: square;
+    margin-left: 10px;
 }
 
 #top_restaurantes ol li,#top_monumentos ol li{
     list-style:upper-roman;
+    margin-left: 10px;
 }
 
 #foto{
@@ -337,13 +348,35 @@ nav i{
     
 }
 
-#pub{
+.pub{
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     
 }
 
+.pub a{
+    text-decoration: none;
+    font-size: small;
+    color: black;
+    margin-bottom: 10px;
+    font-style: italic;
+}
 
+.pub a:hover{
+    font-weight: bold;
+}
 
+#fundo_interesse{
+    background-color: #F4F4F4;  
+    margin: 0;
+}
+
+  
+#segundo_menu{
+    margin-top: 10px;
+    font-size: small;
+}
 
 
