@@ -11,7 +11,9 @@
     /* medidas sao tomadas da borda */
     font-family: Barlow;
 }
-
+body{
+    overflow-x: hidden;
+}
 
 header {
     position: sticky;
@@ -188,4 +190,24 @@ article#cidades {
 #experimenta div:nth-child(5) {
     background-color: #88A384;
 
+}
+#parallax {
+    background-image: url(images/tree.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#parallax div h2{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+   
+}
+#parallax div p{
+    text-align: center;
+    color: white;
+    font-style: italic;
+   
 }
