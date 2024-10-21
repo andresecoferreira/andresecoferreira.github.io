@@ -59,6 +59,22 @@ header a:last-child {
     padding: 13px;
 }
 
+@keyframes deslocamento {
+    0% {
+        transform: translateX(0); /* Posição inicial */
+    }
+    25% {
+        transform: translateX(-20vw); /* Movimenta para a direita */
+    }
+    
+    75% {
+        transform: translateX(20vw); /* Volta à posição inicial */
+    }
+    100% {
+        transform: translateX(0); /* Volta à posição inicial */
+    }
+}
+
 #poema {
     display: flex;
     justify-content: center;
@@ -68,6 +84,12 @@ header a:last-child {
 
     background-color: #B2C8A2;
     font-weight: bold;
+
+    
+}
+#poema p{
+    animation: deslocamento 30s infinite ease-in-out;
+
 }
 
 #autor {
@@ -197,6 +219,7 @@ article#cidades {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 20px;
 }
 
 #parallax div h2{
@@ -209,6 +232,7 @@ article#cidades {
     text-align: center;
     color: white;
     font-style: italic;
+    
    
 }
 #video{
@@ -225,5 +249,60 @@ article#cidades {
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
+  }
+  #fotos_madrid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8vw;
+    background-color: #98B28F;
+    
+  }
+  #fotos_madrid div{
+    margin:10px;
+  }
+  #fotos_madrid p{
+    text-align: center;
+    color: white;
+  }
+ 
+
+  #fotos_madrid div:nth-child(2) img:hover{    
+    border-radius: 150px;
+    transition: 3s;
+
+  }
+  #fotos_madrid div:nth-child(3) img:hover{    
+    transform: rotate(180deg);
+    transition: 3s;
+  }
+  
+  #fotos_madrid div:nth-child(5) img:hover{    
+    transform: scaleX(-1);
+    transition: 3s;
+  }
+  #fotos_madrid div:nth-child(6) img:hover{    
+    transform: translate(50px,100px);
+    transition: 3s;
+  }
+
+  #fotos_madrid div:nth-child(8) img:hover{    
+    filter: blur(5px);
+    transition: 2s;
+  }
+
+  #fotos_madrid div:nth-child(9) img:hover{    
+    transform: skew(20deg,10deg);
+    transition: 2s;
+  }
+  #fotos_madrid div:nth-child(11) img:hover{    
+    filter: hue-rotate(90deg);
+    transition: 2s;
+  }
+  #fotos_madrid div:nth-child(12) img:hover{    
+    transform: scale(1.5);
+    transition: 2s;
   }
  
