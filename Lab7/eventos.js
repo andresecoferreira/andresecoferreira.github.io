@@ -24,8 +24,8 @@ function mouseOut(){
     bulls.style.color = "white"
 }
 
-let area= document.querySelector("section")
+let area= document.querySelector("header")
 area.addEventListener("mousemove",changeCursor)
 function changeCursor(){
-    area.style.cursor="url(./images/basketball.png),auto"
+    area.textContent="I LOVE THIS GAME"
 }
