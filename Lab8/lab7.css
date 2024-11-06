@@ -1,0 +1,14 @@
+li{
+    margin: 30px;
+}
+
+nav{
+    background-color: khaki;
+    padding: 10px;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+}
