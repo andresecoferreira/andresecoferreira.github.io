@@ -27,6 +27,7 @@ function criarProduto(produto){
         const lista = JSON.parse(localStorage.getItem('produtos-selecionados')) ;        
         lista.push(produto);
         localStorage.setItem('produtos-selecionados', JSON.stringify(lista));
+        atualizaCesto();
          
 
     });
@@ -40,7 +41,6 @@ function carregarProdutos(produtos){
         section.append(criarProduto(produto));  
     });
 }
-
 function criarProdutoCesto (produto){
     const article = document.createElement(`article`); 
 
@@ -68,24 +68,29 @@ function criarProdutoCesto (produto){
         //remove da section
         const section =document.getElementById("cesto");  
         section.removeChild(article);
+        atualizaCesto();
     });
     return article;
 
 
 }
 function atualizaCesto(){
+    const section =document.getElementById("cesto"); 
+    section.innerHTML="";
+    let somaTotal=0;
     const lista = JSON.parse(localStorage.getItem('produtos-selecionados'));
-    lista.forEach(produto=> {
-        const section =document.getElementById("cesto");   
+    lista.forEach(produto=> {          
         section.append(criarProdutoCesto(produto)); 
-        
+        somaTotal+=produto.price;
     })
+    document.getElementById("custoTotal").textContent=somaTotal.toFixed(2) + " €";
 }   
 
 addEventListener("DOMContentLoaded",() => {
     carregarProdutos(produtos);
     atualizaCesto();
 })
+
 
 
 
