@@ -132,7 +132,6 @@ function criarFiltros(){
         }
     })    
 }
-
 function ordenarPorPreco(){
     const selectOrdenar =document.getElementById("ordenar");
     selectOrdenar.onchange= function(){
@@ -145,24 +144,27 @@ function ordenarPorPreco(){
 
     }
 }
-
 function pesquisar(){
     const pesquisarProduto=document.getElementById("pesquisar")
     pesquisarProduto.oninput=function(){
         carregarProdutos(produtos.filter (produto => produto.title.toLowerCase().includes(this.value.toLowerCase()) ))
     }
 }
-
-
 function comprar(){ 
+  
     const botaoComprar=document.getElementById("botao");
+    let counter=1; 
     botaoComprar.onclick = function(){
-        let counter=1; 
-
+        let idProdutos = [];
+        const produtosCarrinho= JSON.parse(localStorage.getItem('produtos-selecionados'));
+        produtosCarrinho.forEach(produto => {
+            idProdutos.push(produto.id);
+        })
+        
         const checkBox = document.getElementById("alunoDeisi");
         const cupaoDesconto = document.getElementById("cupao")
         const bodyEnvio = {
-            products: JSON.parse(localStorage.getItem('produtos-selecionados')),
+            products: idProdutos,
             student: checkBox.checked, 
             coupon: cupaoDesconto.value
         };
