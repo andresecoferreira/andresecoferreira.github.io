@@ -95,13 +95,16 @@ function atualizaCesto(){
     const lista = JSON.parse(localStorage.getItem('produtos-selecionados'));
     lista.forEach(produto=> {          
         section.append(criarProdutoCesto(produto)); 
-        somaTotal+=parseInt(produto.price);
+        somaTotal+=parseFloat(produto.price);
     })
     document.getElementById("custoTotal").textContent=somaTotal.toFixed(2) + " €";
 }   
 addEventListener("DOMContentLoaded",() => {    
     atualizaCesto();
     criarFiltros();
+    ordenarPorPreco();
+    pesquisar();
+    comprar();
 })
 function criarFiltros(){    
     const filtrar = document.getElementById("filtros") 
@@ -116,13 +119,98 @@ function criarFiltros(){
             filtrar.append(option);            
         });
         const section =document.getElementById("produtos");
-        filtros.onchange = function(){                  
-            carregarProdutos(produtos.filter (produto => produto.category === this.value));       
+        filtrar.onchange = function(){             
+            if(this.value != "todas"){
+                carregarProdutos(produtos.filter (produto => produto.category === this.value));  
+               
+            }else{
+                carregarProdutos(produtos);
+            }             
+            
+                 
             
         }
     })    
 }
 
+function ordenarPorPreco(){
+    const selectOrdenar =document.getElementById("ordenar");
+    selectOrdenar.onchange= function(){
+        console.log(this.value)
+        if (this.value === "ascendente"){
+            carregarProdutos(produtos.sort((a,b) => a.price-b.price))
+        }else if (this.value === "descendente"){
+            carregarProdutos(produtos.sort((a,b) => b.price-a.price))
+        }      
+
+    }
+}
+
+function pesquisar(){
+    const pesquisarProduto=document.getElementById("pesquisar")
+    pesquisarProduto.oninput=function(){
+        carregarProdutos(produtos.filter (produto => produto.title.toLowerCase().includes(this.value.toLowerCase()) ))
+    }
+}
+
+
+function comprar(){ 
+    const botaoComprar=document.getElementById("botao");
+    botaoComprar.onclick = function(){
+        let counter=1; 
+
+        const checkBox = document.getElementById("alunoDeisi");
+        const cupaoDesconto = document.getElementById("cupao")
+        const bodyEnvio = {
+            products: JSON.parse(localStorage.getItem('produtos-selecionados')),
+            student: checkBox.checked, 
+            coupon: cupaoDesconto.value
+        };
+    console.log(bodyEnvio);
+
+    fetch('https://deisishop.pythonanywhere.com/buy/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json', 
+        },
+        body: JSON.stringify(bodyEnvio)
+        })
+        .then(response => response.json()) 
+        .then(data => {           
+                //desconto DEISI                
+                const section = document.getElementById("checkout");                                                     
+                if(counter===1){
+                    let newH3 = document.createElement('h3');
+                    newH3.id="desconto"
+                    newH3.textContent = "Valor final a pagar (com eventuais descontos) : ";
+                    section.append(newH3);
+                    
+                }
+                if(checkBox.checked){
+                    let h3Alterar = document.getElementById("desconto")
+                    h3Alterar.textContent = "Valor final a pagar (com eventuais descontos) : " + data.totalCost + " €"; 
+                    
+                }else{
+                    let h3Alterar = document.getElementById("desconto")
+                    h3Alterar.textContent = "Valor final a pagar (com eventuais descontos) : " + data.totalCost + " €";
+                }  
+                if (counter === 1){
+                    let newP = document.createElement('p');
+                    newP.textContent = "Referência de pagamento: " + data.reference;
+                    newP.id="referencia"
+                    section.append(newP)
+
+                }                  
+                let pReferencia = document.getElementById("referencia")
+                pReferencia.textContent = "Referência de pagamento: " + data.reference;                
+                counter++;
+
+          })
+        
+    } 
+
+ 
+}
 
 
 

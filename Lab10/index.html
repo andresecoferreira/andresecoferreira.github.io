@@ -20,7 +20,7 @@
         <section id="submenu">
             <span>Filtrar</span>
             <select id="filtros">
-                <option value="vazio">Todas as categorias</option>
+                <option value="todas">Todas as categorias</option>
             </select>
             <span>Ordenar</span>
             <select id="ordenar">
@@ -29,7 +29,7 @@
                 <option value="descendente">Descendente</option>
             </select>
             <span>Procurar</span>
-            <input type="text" type="procurar" placeholder=" pesquise por produtos">
+            <input type="text" type="procurar" placeholder=" pesquise por produtos" id="pesquisar">
         </section>
         <section id="produtos"></section>
     </main>
@@ -39,7 +39,13 @@
         <section id="cesto">
 
         </section>
-        <p>Custo Total: <span id="custoTotal"></span></p>
+        
+        <section id="checkout">
+            <h3>Custo Total: <span id="custoTotal"></span></h3>
+            <p>És estudante do DEISI? <input type="checkbox" id="alunoDeisi"></p>
+            <p>Cupão de Desconto: <input type="text" id="cupao"></p>
+            <button type="submit" id="botao">Comprar</button>
+        </section>
 
     </aside>
     <footer>
