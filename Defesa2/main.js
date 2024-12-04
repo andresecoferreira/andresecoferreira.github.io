@@ -46,37 +46,6 @@ function criarProduto(produto){
     return article;
 
 }
-
-function criarProduto2(produto){
-    const article = document.createElement(`article`);    //criar article        
-    const title = document.createElement (`h3`);         //criar h3 para titulo do produto
-    title.textContent = produto.title;
-    article.append(title);
-
-    const image = document.createElement(`img`);          //criar imagem do produto
-    image.src= produto.image;
-    article.append(image);
-
-    const price = document.createElement(`h4`);
-    price.textContent = produto.price + " €";
-    article.append(price);
-
-    const button = document.createElement(`button`);
-    button.textContent = "+ Adicionar ao Cesto"
-    article.append(button);
-    button.addEventListener("click", () =>{
-        //adicionar ao local storage
-        const lista = JSON.parse(localStorage.getItem('produtos-selecionados')) ;        
-        lista.push(produto);
-        localStorage.setItem('produtos-selecionados', JSON.stringify(lista));
-        atualizaCesto();
-         
-
-    });
-
-    return article;
-
-}
 function carregarProdutos(prod){   
         const section =document.getElementById("produtos"); 
         section.innerHTML=""
@@ -84,15 +53,6 @@ function carregarProdutos(prod){
             section.append(criarProduto(produto));  
         });      
    
-
-}
-function carregarProdutos2(prod){   
-    const section =document.getElementById("produtos"); 
-    section.innerHTML=""
-    prod.forEach(produto => {
-        section.append(criarProduto2(produto));  
-    });      
-
 
 }
 function criarProdutoCesto (produto){
@@ -145,8 +105,6 @@ addEventListener("DOMContentLoaded",() => {
     ordenarPorPreco();
     pesquisar();
     comprar();
-    comprarTodos();
-    menosInfo();
 })
 function criarFiltros(){    
     const filtrar = document.getElementById("filtros") 
@@ -169,6 +127,8 @@ function criarFiltros(){
                 carregarProdutos(produtos);
             }             
             
+                 
+            
         }
     })    
 }
@@ -177,9 +137,9 @@ function ordenarPorPreco(){
     selectOrdenar.onchange= function(){
         console.log(this.value)
         if (this.value === "ascendente"){
-            carregarProdutos(produtos.sort((a,b) => a.rating[0]-b.rating[0]))
+            carregarProdutos(produtos.sort((a,b) => a.price-b.price))
         }else if (this.value === "descendente"){
-            carregarProdutos(produtos.sort((a,b) => b.rating[0]-a.rating[0]))
+            carregarProdutos(produtos.sort((a,b) => b.price-a.price))
         }      
 
     }
@@ -187,11 +147,7 @@ function ordenarPorPreco(){
 function pesquisar(){
     const pesquisarProduto=document.getElementById("pesquisar")
     pesquisarProduto.oninput=function(){
-        carregarProdutos(produtos.filter (produto => produto.title.toLowerCase().includes(this.value.toLowerCase() )));
-        carregarProdutos(produtos.filter (produto => produto.description.toLowerCase().includes(this.value.toLowerCase() )))
-
-
-        
+        carregarProdutos(produtos.filter (produto => produto.title.toLowerCase().includes(this.value.toLowerCase()) ))
     }
 }
 function comprar(){ 
@@ -206,13 +162,11 @@ function comprar(){
         })
         
         const checkBox = document.getElementById("alunoDeisi");
-        const cupaoDesconto = document.getElementById("cupao");
-        const inputNome = document.getElementById("inserirNome")
+        const cupaoDesconto = document.getElementById("cupao")
         const bodyEnvio = {
             products: idProdutos,
             student: checkBox.checked, 
-            coupon: cupaoDesconto.value,
-            name: inputNome.value 
+            coupon: cupaoDesconto.value
         };
     console.log(bodyEnvio);
 
@@ -242,20 +196,16 @@ function comprar(){
                     let h3Alterar = document.getElementById("desconto")
                     h3Alterar.textContent = "Valor final a pagar (com eventuais descontos) : " + data.totalCost + " €";
                 }  
-                if (counter === 1){                    
+                if (counter === 1){
                     let newP = document.createElement('p');
                     newP.textContent = "Referência de pagamento: " + data.reference;
                     newP.id="referencia"
                     section.append(newP)
-                    
 
                 }                  
                 let pReferencia = document.getElementById("referencia")
                 pReferencia.textContent = "Referência de pagamento: " + data.reference;                
                 counter++;
-                let newP2 = document.createElement('p');
-                newP2.textContent = data.message;
-                section.append(newP2)
 
           })
         
@@ -264,24 +214,5 @@ function comprar(){
  
 }
 
-function comprarTodos(){
-    const botao = document.getElementById("botaoTodos")
-    botao.addEventListener('click',() => {
-        const lista = JSON.parse(localStorage.getItem('produtos-selecionados')) ;    
-        produtos.forEach ( produto => {
-            lista.push(produto);
-            localStorage.setItem('produtos-selecionados', JSON.stringify(lista));
-            atualizaCesto();
-        })     
-    })
-}
-
-function menosInfo(){
-    const botao = document.getElementById("menosInfo");
-    addEventListener('click', botao => {
-        carregarProdutos2(produtos)
-    })
 
 
-
-}
